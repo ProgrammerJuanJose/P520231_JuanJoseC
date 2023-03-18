@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +7,9 @@ using System.Windows.Forms;
 
 namespace P520231_JuanJoseC
 {
-    public partial class Form1 : Form
+    public static class Globales
     {
-        public Form1()
-        {
-            InitializeComponent();
-        }
+        public static Form MiFormPrincipal = new Forms.FrmMDI();
+        public static Form MiFormPregunta = new Forms.ExitAsk();
     }
 }
