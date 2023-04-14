@@ -11,5 +11,6 @@ namespace P520231_JuanJoseC
     {
         public static Form MiFormPrincipal = new Forms.FrmMDI();
         public static Form MiFormPregunta = new Forms.ExitAsk();
+        public static Forms.FrmusuariosGestion MiFormGestionUsuarios = new Forms.FrmusuariosGestion();
     }
 }

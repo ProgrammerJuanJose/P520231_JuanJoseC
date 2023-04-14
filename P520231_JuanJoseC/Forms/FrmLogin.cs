@@ -49,5 +49,7 @@ namespace P520231_JuanJoseC.Forms
 
             this.Hide();
         }
+
+       
     }
 }

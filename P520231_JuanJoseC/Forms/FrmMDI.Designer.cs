@@ -30,10 +30,6 @@
         {
             this.MenuPrincipal = new System.Windows.Forms.MenuStrip();
             this.MnuGestiones = new System.Windows.Forms.ToolStripMenuItem();
-            this.MnuProcesos = new System.Windows.Forms.ToolStripMenuItem();
-            this.MnuReportes = new System.Windows.Forms.ToolStripMenuItem();
-            this.MnuAcercaDe = new System.Windows.Forms.ToolStripMenuItem();
-            this.MnuSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDeProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,13 +38,17 @@
             this.rolesDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposDeProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuProcesos = new System.Windows.Forms.ToolStripMenuItem();
             this.registroDeComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuReportes = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasPorFechasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasPorProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasPorProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeInventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.reimpresiónDeFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuAcercaDe = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,49 +87,12 @@
             this.MnuGestiones.Size = new System.Drawing.Size(133, 32);
             this.MnuGestiones.Text = "GESTIONES";
             // 
-            // MnuProcesos
-            // 
-            this.MnuProcesos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registroDeComprasToolStripMenuItem});
-            this.MnuProcesos.ForeColor = System.Drawing.SystemColors.Control;
-            this.MnuProcesos.Name = "MnuProcesos";
-            this.MnuProcesos.Size = new System.Drawing.Size(126, 32);
-            this.MnuProcesos.Text = "PROCESOS";
-            // 
-            // MnuReportes
-            // 
-            this.MnuReportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.comprasPorFechasToolStripMenuItem,
-            this.comprasPorProveedorToolStripMenuItem,
-            this.comprasPorProductoToolStripMenuItem,
-            this.listadoDeInventarioToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.reimpresiónDeFacturaToolStripMenuItem});
-            this.MnuReportes.ForeColor = System.Drawing.SystemColors.Control;
-            this.MnuReportes.Name = "MnuReportes";
-            this.MnuReportes.Size = new System.Drawing.Size(124, 32);
-            this.MnuReportes.Text = "REPORTES";
-            // 
-            // MnuAcercaDe
-            // 
-            this.MnuAcercaDe.ForeColor = System.Drawing.SystemColors.Control;
-            this.MnuAcercaDe.Name = "MnuAcercaDe";
-            this.MnuAcercaDe.Size = new System.Drawing.Size(134, 32);
-            this.MnuAcercaDe.Text = "ACERCA DE";
-            // 
-            // MnuSalir
-            // 
-            this.MnuSalir.ForeColor = System.Drawing.SystemColors.Control;
-            this.MnuSalir.Name = "MnuSalir";
-            this.MnuSalir.Size = new System.Drawing.Size(80, 32);
-            this.MnuSalir.Text = "SALIR";
-            this.MnuSalir.Click += new System.EventHandler(this.MnuSalir_Click);
-            // 
             // gestionDeUsuariosToolStripMenuItem
             // 
             this.gestionDeUsuariosToolStripMenuItem.Name = "gestionDeUsuariosToolStripMenuItem";
             this.gestionDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(328, 32);
             this.gestionDeUsuariosToolStripMenuItem.Text = "Gestion de usuarios";
+            this.gestionDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.gestionDeUsuariosToolStripMenuItem_Click);
             // 
             // gestiónDeProductosToolStripMenuItem
             // 
@@ -172,11 +135,34 @@
             this.tiposDeCompraToolStripMenuItem.Size = new System.Drawing.Size(328, 32);
             this.tiposDeCompraToolStripMenuItem.Text = "Tipos de compra";
             // 
+            // MnuProcesos
+            // 
+            this.MnuProcesos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registroDeComprasToolStripMenuItem});
+            this.MnuProcesos.ForeColor = System.Drawing.SystemColors.Control;
+            this.MnuProcesos.Name = "MnuProcesos";
+            this.MnuProcesos.Size = new System.Drawing.Size(126, 32);
+            this.MnuProcesos.Text = "PROCESOS";
+            // 
             // registroDeComprasToolStripMenuItem
             // 
             this.registroDeComprasToolStripMenuItem.Name = "registroDeComprasToolStripMenuItem";
             this.registroDeComprasToolStripMenuItem.Size = new System.Drawing.Size(292, 32);
             this.registroDeComprasToolStripMenuItem.Text = "Registro de compras";
+            // 
+            // MnuReportes
+            // 
+            this.MnuReportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.comprasPorFechasToolStripMenuItem,
+            this.comprasPorProveedorToolStripMenuItem,
+            this.comprasPorProductoToolStripMenuItem,
+            this.listadoDeInventarioToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.reimpresiónDeFacturaToolStripMenuItem});
+            this.MnuReportes.ForeColor = System.Drawing.SystemColors.Control;
+            this.MnuReportes.Name = "MnuReportes";
+            this.MnuReportes.Size = new System.Drawing.Size(124, 32);
+            this.MnuReportes.Text = "REPORTES";
             // 
             // comprasPorFechasToolStripMenuItem
             // 
@@ -212,6 +198,21 @@
             this.reimpresiónDeFacturaToolStripMenuItem.Name = "reimpresiónDeFacturaToolStripMenuItem";
             this.reimpresiónDeFacturaToolStripMenuItem.Size = new System.Drawing.Size(321, 32);
             this.reimpresiónDeFacturaToolStripMenuItem.Text = "Reimpresión de factura";
+            // 
+            // MnuAcercaDe
+            // 
+            this.MnuAcercaDe.ForeColor = System.Drawing.SystemColors.Control;
+            this.MnuAcercaDe.Name = "MnuAcercaDe";
+            this.MnuAcercaDe.Size = new System.Drawing.Size(134, 32);
+            this.MnuAcercaDe.Text = "ACERCA DE";
+            // 
+            // MnuSalir
+            // 
+            this.MnuSalir.ForeColor = System.Drawing.SystemColors.Control;
+            this.MnuSalir.Name = "MnuSalir";
+            this.MnuSalir.Size = new System.Drawing.Size(80, 32);
+            this.MnuSalir.Text = "SALIR";
+            this.MnuSalir.Click += new System.EventHandler(this.MnuSalir_Click);
             // 
             // FrmMDI
             // 

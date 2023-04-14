@@ -114,7 +114,7 @@ namespace Logica.Services
         //una instancia nueva de la clase.
         public Conexion()
         {
-            this.CadenaDeConexion = ConfigurationManager.ConnectionStrings["CNNSTR"].ToString();
+            CadenaDeConexion = ConfigurationManager.ConnectionStrings["CNNSTR"].ToString();
 
         }
 
