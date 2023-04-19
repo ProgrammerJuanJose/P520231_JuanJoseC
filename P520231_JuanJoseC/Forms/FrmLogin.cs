@@ -17,39 +17,86 @@ namespace P520231_JuanJoseC.Forms
             InitializeComponent();
         }
 
-        private void FrmLogin_Load(object sender, EventArgs e)
+        private void BtnCancelar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
+            //CIERRA LA APP
             Application.Exit();
         }
 
-        private void btnVerContrasennia_MouseDown_1(object sender, MouseEventArgs e)
+        private void BtnVerContrasennia_MouseDown(object sender, MouseEventArgs e)
         {
-            txtContrasennia.UseSystemPasswordChar = false;
+            TxtContrasennia.UseSystemPasswordChar = false;
         }
 
-        private void btnVerContrasennia_MouseUp(object sender, MouseEventArgs e)
+        private void BtnVerContrasennia_MouseUp(object sender, MouseEventArgs e)
         {
-            txtContrasennia.UseSystemPasswordChar = true;
+            TxtContrasennia.UseSystemPasswordChar = true;
         }
 
-        private void btnIngresar_Click(object sender, EventArgs e)
+        private void BtnIngresar_Click(object sender, EventArgs e)
         {
-            //Hay que vaidar el usuario
+
+            //validas que se haya digitado un usuario y contraseña 
+            if (!string.IsNullOrEmpty(TxtEmail.Text.Trim()) &&
+                !string.IsNullOrEmpty(TxtContrasennia.Text.Trim()))
+            {
+                string usuario = TxtEmail.Text.Trim();
+                string contrasennia = TxtContrasennia.Text.Trim();
+
+                //tratar de validar que los datos digitados sean correctos 
+                //En caso que la validación sea correcta, aplicamos los valores al usuario global
+                Globales.MiUsuarioGlobal = Globales.MiUsuarioGlobal.ValidarUsuario(usuario, contrasennia);
+
+                if (Globales.MiUsuarioGlobal.UsuarioID > 0)
+                {
+                    //si la validación es correcta el Id debería tener un valor mayor a cero
+
+                    Globales.MiFormPrincipal.Show();
+
+                    this.Hide();
+
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o Contraseña Incorrectas...", "Error de validación", MessageBoxButtons.OK);
+
+                    TxtContrasennia.Focus();
+                    TxtContrasennia.SelectAll();
+
+                }
+
+
+
+            }
+            else
+            {
+                MessageBox.Show("Faltan datos requeridos!", "Error de validación", MessageBoxButtons.OK);
+            }
+
+
+        }
+
+        private void FrmLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            //al presionar cierta combinación de teclas el boton de ingreso directo aparece 
+            if (e.Shift & e.KeyCode == Keys.A)
+            {
+                //si presionamos shift + tab + a
+                BtnIngresoDirecto.Visible = true;
+            }
+
+        }
+
+        private void BtnIngresoDirecto_Click(object sender, EventArgs e)
+        {
             Globales.MiFormPrincipal.Show();
 
             this.Hide();
         }
 
-       
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

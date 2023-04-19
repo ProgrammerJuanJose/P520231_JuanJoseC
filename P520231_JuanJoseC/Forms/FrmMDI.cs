@@ -22,22 +22,57 @@ namespace P520231_JuanJoseC.Forms
             Application.Exit();
         }
 
-        private void MnuSalir_Click(object sender, EventArgs e)
+        private void gestiónDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Globales.MiFormPregunta.Show();
-        }
-
-        private void gestionDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //Control para que el form no se abra varias veces si el usuario selecciona varias veces esta ventanilla
+            //control para que el formulario de gestión de usuarios se muestre 
+            //solo una vez
 
             if (!Globales.MiFormGestionUsuarios.Visible)
             {
-                Globales.MiFormGestionUsuarios = new FrmusuariosGestion();
+                Globales.MiFormGestionUsuarios = new FrmUsuariosGestion();
 
                 Globales.MiFormGestionUsuarios.Show();
             }
-                
+
+        }
+
+        private void FrmMDI_Load(object sender, EventArgs e)
+        {
+            //mostrar el usuario loguedo 
+
+            string InfoUsuario = string.Format("{0}-{1}({2})",
+                                                Globales.MiUsuarioGlobal.UsuarioNombre,
+                                                Globales.MiUsuarioGlobal.UsuarioCorreo,
+                                                Globales.MiUsuarioGlobal.MiRolTipo.UsuarioRolDescripcion);
+
+            LblUsuario.Text = InfoUsuario;
+
+            switch (Globales.MiUsuarioGlobal.MiRolTipo.UsuarioRolID)
+            {
+                case 1:
+                    //sería admin, no se oculta nada
+                    break;
+                case 2:
+                    //sería usuario normal, se deben ocultar algunas opciones de menú 
+                    gestiónDeUsuariosToolStripMenuItem.Visible = false;
+                    rolesDeUsuarioToolStripMenuItem.Visible = false;
+                    tiposDeProveedorToolStripMenuItem.Visible = false;
+                    tiposDeCompraToolStripMenuItem.Visible = false;
+                    break;
+            }
+
+
+        }
+
+        private void rEGISTRODECOMPRASToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Globales.MiFormRegistroCompra.Visible)
+            {
+                Globales.MiFormRegistroCompra = new FrmRegistroCompra();
+
+                Globales.MiFormRegistroCompra.Show();
+            }
         }
     }
+
 }

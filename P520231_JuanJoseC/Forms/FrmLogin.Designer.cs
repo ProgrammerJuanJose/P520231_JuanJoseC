@@ -30,168 +30,172 @@ namespace P520231_JuanJoseC.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.correo = new System.Windows.Forms.Label();
-            this.contra = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtContrasennia = new System.Windows.Forms.TextBox();
-            this.lblRecuperarContrasenia = new System.Windows.Forms.LinkLabel();
-            this.btnIngresar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TxtEmail = new System.Windows.Forms.TextBox();
+            this.TxtContrasennia = new System.Windows.Forms.TextBox();
+            this.BtnIngresar = new System.Windows.Forms.Button();
+            this.BtnCancelar = new System.Windows.Forms.Button();
+            this.LblRecuperarContrasennia = new System.Windows.Forms.LinkLabel();
+            this.BtnVerContrasennia = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnVerContrasennia = new System.Windows.Forms.PictureBox();
+            this.BtnIngresoDirecto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnVerContrasennia)).BeginInit();
             this.SuspendLayout();
             // 
-            // correo
+            // label1
             // 
-            this.correo.AutoSize = true;
-            this.correo.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.correo.ForeColor = System.Drawing.SystemColors.Control;
-            this.correo.Location = new System.Drawing.Point(28, 271);
-            this.correo.Name = "correo";
-            this.correo.Size = new System.Drawing.Size(302, 38);
-            this.correo.TabIndex = 0;
-            this.correo.Text = "Correo electrónico";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(59, 186);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(265, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "CORREO ELECTRONICO";
             // 
-            // contra
+            // label2
             // 
-            this.contra.AutoSize = true;
-            this.contra.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contra.ForeColor = System.Drawing.SystemColors.Control;
-            this.contra.Location = new System.Drawing.Point(28, 367);
-            this.contra.Name = "contra";
-            this.contra.Size = new System.Drawing.Size(196, 38);
-            this.contra.TabIndex = 1;
-            this.contra.Text = "Contraseña";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(99, 253);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(162, 25);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "CONTRASEÑA";
             // 
-            // txtEmail
+            // TxtEmail
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(33, 314);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(408, 30);
-            this.txtEmail.TabIndex = 3;
+            this.TxtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtEmail.Location = new System.Drawing.Point(12, 209);
+            this.TxtEmail.Name = "TxtEmail";
+            this.TxtEmail.Size = new System.Drawing.Size(304, 30);
+            this.TxtEmail.TabIndex = 2;
             // 
-            // txtContrasennia
+            // TxtContrasennia
             // 
-            this.txtContrasennia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContrasennia.Location = new System.Drawing.Point(33, 408);
-            this.txtContrasennia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtContrasennia.Name = "txtContrasennia";
-            this.txtContrasennia.Size = new System.Drawing.Size(408, 30);
-            this.txtContrasennia.TabIndex = 4;
-            this.txtContrasennia.UseSystemPasswordChar = true;
+            this.TxtContrasennia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtContrasennia.Location = new System.Drawing.Point(12, 276);
+            this.TxtContrasennia.Name = "TxtContrasennia";
+            this.TxtContrasennia.Size = new System.Drawing.Size(262, 30);
+            this.TxtContrasennia.TabIndex = 3;
+            this.TxtContrasennia.UseSystemPasswordChar = true;
             // 
-            // lblRecuperarContrasenia
+            // BtnIngresar
             // 
-            this.lblRecuperarContrasenia.AutoSize = true;
-            this.lblRecuperarContrasenia.Location = new System.Drawing.Point(286, 442);
-            this.lblRecuperarContrasenia.Name = "lblRecuperarContrasenia";
-            this.lblRecuperarContrasenia.Size = new System.Drawing.Size(155, 18);
-            this.lblRecuperarContrasenia.TabIndex = 5;
-            this.lblRecuperarContrasenia.TabStop = true;
-            this.lblRecuperarContrasenia.Text = "Recuperar contraseña";
+            this.BtnIngresar.BackColor = System.Drawing.Color.Green;
+            this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnIngresar.ForeColor = System.Drawing.Color.White;
+            this.BtnIngresar.Location = new System.Drawing.Point(12, 350);
+            this.BtnIngresar.Name = "BtnIngresar";
+            this.BtnIngresar.Size = new System.Drawing.Size(125, 31);
+            this.BtnIngresar.TabIndex = 4;
+            this.BtnIngresar.Text = "INGRESAR";
+            this.BtnIngresar.UseVisualStyleBackColor = false;
+            this.BtnIngresar.Click += new System.EventHandler(this.BtnIngresar_Click);
             // 
-            // btnIngresar
+            // BtnCancelar
             // 
-            this.btnIngresar.BackColor = System.Drawing.Color.Lime;
-            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnIngresar.Location = new System.Drawing.Point(33, 475);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(170, 40);
-            this.btnIngresar.TabIndex = 6;
-            this.btnIngresar.Text = "INGRESAR";
-            this.btnIngresar.UseVisualStyleBackColor = false;
-            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            this.BtnCancelar.BackColor = System.Drawing.Color.Firebrick;
+            this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
+            this.BtnCancelar.Location = new System.Drawing.Point(184, 350);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(132, 31);
+            this.BtnCancelar.TabIndex = 5;
+            this.BtnCancelar.Text = "Cancelar";
+            this.BtnCancelar.UseVisualStyleBackColor = false;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
-            // btnCancelar
+            // LblRecuperarContrasennia
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Red;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCancelar.Location = new System.Drawing.Point(270, 477);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(171, 38);
-            this.btnCancelar.TabIndex = 7;
-            this.btnCancelar.Text = "CANCELAR";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.LblRecuperarContrasennia.AutoSize = true;
+            this.LblRecuperarContrasennia.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.LblRecuperarContrasennia.Location = new System.Drawing.Point(202, 305);
+            this.LblRecuperarContrasennia.Name = "LblRecuperarContrasennia";
+            this.LblRecuperarContrasennia.Size = new System.Drawing.Size(152, 17);
+            this.LblRecuperarContrasennia.TabIndex = 7;
+            this.LblRecuperarContrasennia.TabStop = true;
+            this.LblRecuperarContrasennia.Text = "Recuperar Contraseña";
+            // 
+            // BtnVerContrasennia
+            // 
+            this.BtnVerContrasennia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnVerContrasennia.ForeColor = System.Drawing.Color.White;
+            this.BtnVerContrasennia.Location = new System.Drawing.Point(280, 276);
+            this.BtnVerContrasennia.Name = "BtnVerContrasennia";
+            this.BtnVerContrasennia.Size = new System.Drawing.Size(36, 26);
+            this.BtnVerContrasennia.TabIndex = 8;
+            this.BtnVerContrasennia.Text = "Ver";
+            this.BtnVerContrasennia.UseVisualStyleBackColor = true;
+            this.BtnVerContrasennia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BtnVerContrasennia_MouseDown);
+            this.BtnVerContrasennia.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BtnVerContrasennia_MouseUp);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::P520231_JuanJoseC.Properties.Resources.p5logo1;
-            this.pictureBox1.Location = new System.Drawing.Point(96, 28);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Image = global::P520231_JuanJoseC.Properties.Resources.p5logo;
+            this.pictureBox1.Location = new System.Drawing.Point(52, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(277, 192);
+            this.pictureBox1.Size = new System.Drawing.Size(222, 168);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // btnVerContrasennia
+            // BtnIngresoDirecto
             // 
-            this.btnVerContrasennia.BackColor = System.Drawing.SystemColors.Window;
-            this.btnVerContrasennia.Image = global::P520231_JuanJoseC.Properties.Resources.ojo;
-            this.btnVerContrasennia.Location = new System.Drawing.Point(405, 404);
-            this.btnVerContrasennia.Name = "btnVerContrasennia";
-            this.btnVerContrasennia.Size = new System.Drawing.Size(36, 35);
-            this.btnVerContrasennia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnVerContrasennia.TabIndex = 8;
-            this.btnVerContrasennia.TabStop = false;
-            this.btnVerContrasennia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnVerContrasennia_MouseDown_1);
-            this.btnVerContrasennia.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnVerContrasennia_MouseUp);
+            this.BtnIngresoDirecto.Location = new System.Drawing.Point(12, 321);
+            this.BtnIngresoDirecto.Name = "BtnIngresoDirecto";
+            this.BtnIngresoDirecto.Size = new System.Drawing.Size(125, 23);
+            this.BtnIngresoDirecto.TabIndex = 9;
+            this.BtnIngresoDirecto.Text = "Ingreso Directo";
+            this.BtnIngresoDirecto.UseVisualStyleBackColor = true;
+            this.BtnIngresoDirecto.Visible = false;
+            this.BtnIngresoDirecto.Click += new System.EventHandler(this.BtnIngresoDirecto_Click);
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.ClientSize = new System.Drawing.Size(474, 564);
-            this.Controls.Add(this.btnVerContrasennia);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.lblRecuperarContrasenia);
-            this.Controls.Add(this.txtEmail);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(328, 402);
+            this.Controls.Add(this.BtnIngresoDirecto);
+            this.Controls.Add(this.BtnVerContrasennia);
+            this.Controls.Add(this.LblRecuperarContrasennia);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.contra);
-            this.Controls.Add(this.correo);
-            this.Controls.Add(this.txtContrasennia);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Controls.Add(this.BtnCancelar);
+            this.Controls.Add(this.BtnIngresar);
+            this.Controls.Add(this.TxtContrasennia);
+            this.Controls.Add(this.TxtEmail);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.KeyPreview = true;
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLogin";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLogin_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnVerContrasennia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
         #endregion
 
-        private System.Windows.Forms.Label correo;
-        private System.Windows.Forms.Label contra;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox TxtEmail;
+        private System.Windows.Forms.TextBox TxtContrasennia;
+        private System.Windows.Forms.Button BtnIngresar;
+        private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtContrasennia;
-        private System.Windows.Forms.LinkLabel lblRecuperarContrasenia;
-        private System.Windows.Forms.Button btnIngresar;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.PictureBox btnVerContrasennia;
+        private System.Windows.Forms.LinkLabel LblRecuperarContrasennia;
+        private System.Windows.Forms.Button BtnVerContrasennia;
+        private System.Windows.Forms.Button BtnIngresoDirecto;
     }
 }
